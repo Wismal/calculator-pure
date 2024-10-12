@@ -1,0 +1,222 @@
+:root {
+  /* Theme 1 (default) */
+  --main-bg: hsl(222,26%,31%);
+  --toggle-bg: hsl(223,31%,20%);
+  --screen-bg: hsl(224,36%,15%);
+
+  --key-bg-del: hsl(225,21%,49%);
+  --key-shadow-del: hsl(224,28%,35%);
+
+  --key-bg-special: hsl(6,63%,50%);
+  --key-shadow-special: hsl(6,70%,34%);
+
+  --key-bg: hsl(30,25%,89%);
+  --key-shadow: hsl(28,16%,65%);
+
+  --text-primary: hsl(221,14%,31%);
+  --text-secondary: hsl(0,0%,100%); 
+
+  --text-specific: hsl(0,0%,100%);
+  --text-specific-result:hsl(0,0%,100%);
+  
+}
+
+.theme2 {
+  /* Theme 2 */
+  --main-bg: hsl(0,0%,90%);
+  --toggle-bg: hsl(0,5%,81%);
+  --screen-bg: hsl(0,0%,93%);
+
+  --key-bg-del: hsl(185,42%,37%);
+  --key-shadow-del: hsl(185,58%,25%);
+
+  --key-bg-special: hsl(25,98%,40%);
+  --key-shadow-special: hsl(25,99%,27%);
+
+  --key-bg: hsl(45,7%,89%);
+  --key-shadow: hsl(35,11%,61%);
+
+  --text-primary: hsl(60,10%,19%);
+  --text-secondary: hsl(0,0%,100%);
+
+  --text-specific: hsl(60,10%,19%);
+  --text-specific-result:hsl(0,0%,100%);
+}
+
+.theme3 {
+  /* Theme 3 */
+  --main-bg: hsl(268,75%,9%);
+  --toggle-bg: hsl(268,71%,12%);
+  --screen-bg: hsl(268,71%,12%);
+
+  --key-bg-del: hsl(281,89%,26%);
+  --key-shadow-del: hsl(285,91%,52%);
+
+  --key-bg-special: hsl(176,100%,44%);
+  --key-shadow-special: hsl(177,92%,70%);
+
+  --key-bg: hsl(268,47%,21%);
+  --key-shadow: hsl(290,70%,36%);
+
+  --text-primary: hsl(52,100%,62%);
+  --text-secondary: hsl(0,0%,100%);
+
+  --text-specific: hsl(52,100%,62%);
+  --text-specific-result:hsl(198, 20%, 13%);
+}
+
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  display: grid;
+  place-content: center;
+  font-size: 32px;
+  font-family: "League Spartan";
+  font-weight: 700;
+  height: 100vh;
+  background-color: var(--main-bg);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 80%;
+  margin-inline: 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: .5rem; 
+  gap: 1rem;
+}
+
+
+.header-letters {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: end;
+  width: 85%;
+  color: var(--text-specific);
+}
+
+.header-options {
+  display:flex;
+  flex-direction: column;
+
+  color: var(--text-specific);
+
+  .options-numbers {
+    display: flex;
+    justify-content: space-around;
+    padding: .1rem;
+  }
+}
+
+.toggle {
+  width: 40px;
+  height: 12px;
+  background-color: var(--toggle-bg);
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.toggle-thumb {
+  width: 8px;
+  height: 8px;
+  background-color: var(--key-bg-special);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.theme2 .toggle-thumb {
+  transform: translateX(12px);
+}
+
+.theme3 .toggle-thumb {
+  transform: translateX(24px);
+}
+
+
+.result {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1.5rem 1rem 1rem 1rem;
+  height: 5rem;
+  border-radius: .5rem;
+  background-color: var(--screen-bg);
+
+  #outcome {
+    color: var(--text-specific); 
+    font-size: 3rem;
+  }
+}
+
+
+.operators {
+  display: grid;
+  grid-template: repeat(5, 1fr)/ repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--toggle-bg);
+  border-radius: .5rem;
+  
+  
+  button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    background-color: var(--key-bg);
+    border: none;
+    box-shadow: 0 -2px 1px var(--key-shadow) inset;
+    color: var(--text-primary);
+    font-weight: bold;
+    
+  }
+  #delButton {
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+  }
+  #resetButton {
+    grid-column: span 2;
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+
+  }
+
+  #equalButton {
+    grid-column: span 2;
+    color: var(--text-specific-result);
+    background-color: var(--key-bg-special);
+    box-shadow: 0 -2px 1px var(--key-shadow-special) inset;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
