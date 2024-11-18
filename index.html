@@ -1,63 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-  <link rel="stylesheet" href="src/style.css">
-  <script src="/src/script.js" defer></script>
-  <script src="/src/themeChanger.js" defer></script>
-</head>
-<body>
-  <main class="main-container">
-    <header>
-      <div class="header-letters">
-        <h1>calc</h1>
-        <p>THEME</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-      </div>
-      <div class="header-options">
-        <div class="options-numbers">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <script src="/src/script.js" defer></script>
+    <script src="/src/themeChanger.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>calc</h1>
+          <p>THEME</p>
         </div>
-        <div id="toggleButton" class="toggle">
-          <div class="toggle-thumb"></div>
+        <div class="header-options">
+          <div class="options-numbers">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div id="toggleButton" class="toggle">
+            <div class="toggle-thumb"></div>
+          </div>
         </div>
-      </div>
-    </header>
-    <section class="result">
-      <span id="outcome">0</span>
-    </section>
-    <section class="operators">
-      <button onclick="addToDisplay('7')">7</button>
-      <button onclick="addToDisplay('8')">8</button>
-      <button onclick="addToDisplay('9')">9</button>
+      </header>
+      <section class="result">
+        <span id="outcome">0</span>
+      </section>
+      <section class="operators">
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
 
-      <button id="delButton">DEL</button>
+        <button id="delButton">DEL</button>
 
-      <button onclick="addToDisplay('4')">4</button>
-      <button onclick="addToDisplay('5')">5</button>
-      <button onclick="addToDisplay('6')">6</button>
-      <button onclick="setOperation('+')">+</button>
-      <button onclick="addToDisplay('1')">1</button>
-      <button onclick="addToDisplay('2')">2</button>
-      <button onclick="addToDisplay('3')">3</button>
-      <button onclick="setOperation('-')">-</button>
-      <button onclick="addToDisplay('.')">.</button>
-      <button onclick="addToDisplay('0')">0</button>
-      <button onclick="setOperation('/')">/</button>
-      <button onclick="setOperation('*')">x</button>
-      
-      <button id="resetButton">RESET</button>
-      <button id="equalButton">=</button>
-    </section>
-  </main>
-</body>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="setOperation('+')">+</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="setOperation('-')">-</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="setOperation('/')">/</button>
+        <button onclick="setOperation('*')">x</button>
+
+        <button id="resetButton">RESET</button>
+        <button id="equalButton">=</button>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,5 +1,14 @@
-:root {
-  /* Theme 1 (default) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+/* :root {
+  /
   --main-bg: hsl(222,26%,31%);
   --toggle-bg: hsl(223,31%,20%);
   --screen-bg: hsl(224,36%,15%);
@@ -22,7 +31,7 @@
 }
 
 .theme2 {
-  /* Theme 2 */
+
   --main-bg: hsl(0,0%,90%);
   --toggle-bg: hsl(0,5%,81%);
   --screen-bg: hsl(0,0%,93%);
@@ -44,7 +53,7 @@
 }
 
 .theme3 {
-  /* Theme 3 */
+ 
   --main-bg: hsl(268,75%,9%);
   --toggle-bg: hsl(268,71%,12%);
   --screen-bg: hsl(268,71%,12%);
@@ -64,8 +73,8 @@
   --text-specific: hsl(52,100%,62%);
   --text-specific-result:hsl(198, 20%, 13%);
 }
-
-
+*/
+/*
 *,*::after,*::before {
     margin: 0;
     padding: 0;
@@ -219,4 +228,4 @@ header {
 
 
 
-
+ */
