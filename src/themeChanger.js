@@ -12,7 +12,11 @@ themeChanger.addEventListener("click", () => {
 })  
 
 function applyTheme(themeIndex) {
-    document.body.className = themes[themeIndex];
+    themes.forEach(theme => {
+        document.body.classList.remove(theme)
+        document.body.classList.add(themes[themeIndex])
+                
+    });
 }
 
 applyTheme(currentTheme);

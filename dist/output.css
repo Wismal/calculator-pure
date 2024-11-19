@@ -554,80 +554,317 @@ video {
   display: none;
 }
 
-.text-blue-900 {
-  --tw-text-opacity: 1;
-  color: rgb(30 58 138 / var(--tw-text-opacity, 1));
+.absolute {
+  position: absolute;
 }
 
-/* :root {
-  /
-  --main-bg: hsl(222,26%,31%);
-  --toggle-bg: hsl(223,31%,20%);
-  --screen-bg: hsl(224,36%,15%);
+.relative {
+  position: relative;
+}
 
-  --key-bg-del: hsl(225,21%,49%);
-  --key-shadow-del: hsl(224,28%,35%);
+.left-2 {
+  left: 0.5rem;
+}
 
-  --key-bg-special: hsl(6,63%,50%);
-  --key-shadow-special: hsl(6,70%,34%);
+.top-1\/2 {
+  top: 50%;
+}
 
-  --key-bg: hsl(30,25%,89%);
-  --key-shadow: hsl(28,16%,65%);
+.me-12 {
+  margin-inline-end: 3rem;
+}
 
-  --text-primary: hsl(221,14%,31%);
-  --text-secondary: hsl(0,0%,100%); 
+.ms-12 {
+  margin-inline-start: 3rem;
+}
 
-  --text-specific: hsl(0,0%,100%);
-  --text-specific-result:hsl(0,0%,100%);
-  
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.bg-\[var\(--key-bg-special\)\] {
+  background-color: var(--key-bg-special);
+}
+
+.bg-\[var\(--main-bg\)\] {
+  background-color: var(--main-bg);
+}
+
+.bg-\[var\(--screen-bg\)\] {
+  background-color: var(--screen-bg);
+}
+
+.bg-\[var\(--toggle-bg\)\] {
+  background-color: var(--toggle-bg);
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-\[\.1rem\] {
+  padding: .1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.font-spartan {
+  font-family: League Spartan, sans-serif;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-\[var\(--text-specific\)\] {
+  color: var(--text-specific);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.theme1 {
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --key-bg-del: hsl(225, 21%, 49%);
+  --key-shadow-del: hsl(224, 28%, 35%);
+  --key-bg-special: hsl(6, 63%, 50%);
+  --key-shadow-special: hsl(6, 70%, 34%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --text-primary: hsl(221, 14%, 31%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-specific: hsl(0, 0%, 100%);
+  --text-specific-result: hsl(0, 0%, 100%);
 }
 
 .theme2 {
-
-  --main-bg: hsl(0,0%,90%);
-  --toggle-bg: hsl(0,5%,81%);
-  --screen-bg: hsl(0,0%,93%);
-
-  --key-bg-del: hsl(185,42%,37%);
-  --key-shadow-del: hsl(185,58%,25%);
-
-  --key-bg-special: hsl(25,98%,40%);
-  --key-shadow-special: hsl(25,99%,27%);
-
-  --key-bg: hsl(45,7%,89%);
-  --key-shadow: hsl(35,11%,61%);
-
-  --text-primary: hsl(60,10%,19%);
-  --text-secondary: hsl(0,0%,100%);
-
-  --text-specific: hsl(60,10%,19%);
-  --text-specific-result:hsl(0,0%,100%);
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --key-bg-del: hsl(185, 42%, 37%);
+  --key-shadow-del: hsl(185, 58%, 25%);
+  --key-bg-special: hsl(25, 98%, 40%);
+  --key-shadow-special: hsl(25, 99%, 27%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --text-primary: hsl(60, 10%, 19%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-specific: hsl(60, 10%, 19%);
+  --text-specific-result: hsl(0, 0%, 100%);
 }
 
 .theme3 {
- 
-  --main-bg: hsl(268,75%,9%);
-  --toggle-bg: hsl(268,71%,12%);
-  --screen-bg: hsl(268,71%,12%);
-
-  --key-bg-del: hsl(281,89%,26%);
-  --key-shadow-del: hsl(285,91%,52%);
-
-  --key-bg-special: hsl(176,100%,44%);
-  --key-shadow-special: hsl(177,92%,70%);
-
-  --key-bg: hsl(268,47%,21%);
-  --key-shadow: hsl(290,70%,36%);
-
-  --text-primary: hsl(52,100%,62%);
-  --text-secondary: hsl(0,0%,100%);
-
-  --text-specific: hsl(52,100%,62%);
-  --text-specific-result:hsl(198, 20%, 13%);
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --key-bg-del: hsl(281, 89%, 26%);
+  --key-shadow-del: hsl(285, 91%, 52%);
+  --key-bg-special: hsl(176, 100%, 44%);
+  --key-shadow-special: hsl(177, 92%, 70%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-specific: hsl(52, 100%, 62%);
+  --text-specific-result: hsl(198, 20%, 13%);
 }
-*/
+
+/* Tailwind no permite es uso de variables dentro de apply, asi que se debera usar asi */
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--key-bg);
+  border: none;
+  box-shadow: 0 -2px 1px var(--key-shadow) inset;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+#delButton {
+  color: var(--text-secondary);
+  background-color: var(--key-bg-del);
+  box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+}
+
+#resetButton {
+  grid-column: span 2;
+  color: var(--text-secondary);
+  background-color: var(--key-bg-del);
+  box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+}
+
+#equalButton {
+  grid-column: span 2;
+  color: var(--text-specific-result);
+  background-color: var(--key-bg-special);
+  box-shadow: 0 -2px 1px var(--key-shadow-special) inset;
+}
+
+.theme1 .toggle-thumb {
+  transform: translateX(0) translateY(-50%);
+}
+
+.theme2 .toggle-thumb {
+  transform: translateX(100%) translateY(-50%);
+}
+
+.theme3 .toggle-thumb {
+  transform: translateX(200%) translateY(-50%);
+}
 
 /*
+
+  #delButton {
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+  }
+  #resetButton {
+    grid-column: span 2;
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+
+  }
+
+  #equalButton {
+    grid-column: span 2;
+    color: var(--text-specific-result);
+    background-color: var(--key-bg-special);
+    box-shadow: 0 -2px 1px var(--key-shadow-special) inset;
+  }
+
+
 *,*::after,*::before {
     margin: 0;
     padding: 0;
@@ -738,19 +975,18 @@ header {
   background-color: var(--toggle-bg);
   border-radius: .5rem;
   
-  
   button {
-    cursor: pointer;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border-radius: .25rem;
-    background-color: var(--key-bg);
-    border: none;
-    box-shadow: 0 -2px 1px var(--key-shadow) inset;
-    color: var(--text-primary);
-    font-weight: bold;
-    
-  }
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  background-color: var(--key-bg);
+  border: none;
+  box-shadow: 0 -2px 1px var(--key-shadow) inset;
+  color: var(--text-primary);
+  font-weight: bold;
+  
+}
   #delButton {
     color: var(--text-secondary);
     background-color: var(--key-bg-del);

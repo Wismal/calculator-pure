@@ -2,79 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
+.theme1 {
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
 
+  --key-bg-del: hsl(225, 21%, 49%);
+  --key-shadow-del: hsl(224, 28%, 35%);
 
+  --key-bg-special: hsl(6, 63%, 50%);
+  --key-shadow-special: hsl(6, 70%, 34%);
 
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
 
+  --text-primary: hsl(221, 14%, 31%);
+  --text-secondary: hsl(0, 0%, 100%);
 
-/* :root {
-  /
-  --main-bg: hsl(222,26%,31%);
-  --toggle-bg: hsl(223,31%,20%);
-  --screen-bg: hsl(224,36%,15%);
-
-  --key-bg-del: hsl(225,21%,49%);
-  --key-shadow-del: hsl(224,28%,35%);
-
-  --key-bg-special: hsl(6,63%,50%);
-  --key-shadow-special: hsl(6,70%,34%);
-
-  --key-bg: hsl(30,25%,89%);
-  --key-shadow: hsl(28,16%,65%);
-
-  --text-primary: hsl(221,14%,31%);
-  --text-secondary: hsl(0,0%,100%); 
-
-  --text-specific: hsl(0,0%,100%);
-  --text-specific-result:hsl(0,0%,100%);
-  
+  --text-specific: hsl(0, 0%, 100%);
+  --text-specific-result: hsl(0, 0%, 100%);
 }
 
 .theme2 {
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
 
-  --main-bg: hsl(0,0%,90%);
-  --toggle-bg: hsl(0,5%,81%);
-  --screen-bg: hsl(0,0%,93%);
+  --key-bg-del: hsl(185, 42%, 37%);
+  --key-shadow-del: hsl(185, 58%, 25%);
 
-  --key-bg-del: hsl(185,42%,37%);
-  --key-shadow-del: hsl(185,58%,25%);
+  --key-bg-special: hsl(25, 98%, 40%);
+  --key-shadow-special: hsl(25, 99%, 27%);
 
-  --key-bg-special: hsl(25,98%,40%);
-  --key-shadow-special: hsl(25,99%,27%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
 
-  --key-bg: hsl(45,7%,89%);
-  --key-shadow: hsl(35,11%,61%);
+  --text-primary: hsl(60, 10%, 19%);
+  --text-secondary: hsl(0, 0%, 100%);
 
-  --text-primary: hsl(60,10%,19%);
-  --text-secondary: hsl(0,0%,100%);
-
-  --text-specific: hsl(60,10%,19%);
-  --text-specific-result:hsl(0,0%,100%);
+  --text-specific: hsl(60, 10%, 19%);
+  --text-specific-result: hsl(0, 0%, 100%);
 }
 
 .theme3 {
- 
-  --main-bg: hsl(268,75%,9%);
-  --toggle-bg: hsl(268,71%,12%);
-  --screen-bg: hsl(268,71%,12%);
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
 
-  --key-bg-del: hsl(281,89%,26%);
-  --key-shadow-del: hsl(285,91%,52%);
+  --key-bg-del: hsl(281, 89%, 26%);
+  --key-shadow-del: hsl(285, 91%, 52%);
 
-  --key-bg-special: hsl(176,100%,44%);
-  --key-shadow-special: hsl(177,92%,70%);
+  --key-bg-special: hsl(176, 100%, 44%);
+  --key-shadow-special: hsl(177, 92%, 70%);
 
-  --key-bg: hsl(268,47%,21%);
-  --key-shadow: hsl(290,70%,36%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
 
-  --text-primary: hsl(52,100%,62%);
-  --text-secondary: hsl(0,0%,100%);
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(0, 0%, 100%);
 
-  --text-specific: hsl(52,100%,62%);
-  --text-specific-result:hsl(198, 20%, 13%);
+  --text-specific: hsl(52, 100%, 62%);
+  --text-specific-result: hsl(198, 20%, 13%);
 }
-*/
+
+/* Tailwind no permite es uso de variables dentro de apply, asi que se debera usar asi */
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--key-bg);
+  border: none;
+  box-shadow: 0 -2px 1px var(--key-shadow) inset;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+#delButton {
+  color: var(--text-secondary);
+  background-color: var(--key-bg-del);
+  box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+}
+
+#resetButton {
+  grid-column: span 2;
+  color: var(--text-secondary);
+  background-color: var(--key-bg-del);
+  box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+}
+
+#equalButton {
+  grid-column: span 2;
+  color: var(--text-specific-result);
+  background-color: var(--key-bg-special);
+  box-shadow: 0 -2px 1px var(--key-shadow-special) inset;
+}
+
+.theme1 .toggle-thumb {
+  transform: translateX(0) translateY(-50%);
+}
+
+.theme2 .toggle-thumb {
+  transform: translateX(100%) translateY(-50%); 
+}
+
+.theme3 .toggle-thumb {
+  transform: translateX(200%) translateY(-50%); 
+}
+
 /*
+
+  #delButton {
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+  }
+  #resetButton {
+    grid-column: span 2;
+    color: var(--text-secondary);
+    background-color: var(--key-bg-del);
+    box-shadow: 0 -2px 1px var(--key-shadow-del) inset;
+
+  }
+
+  #equalButton {
+    grid-column: span 2;
+    color: var(--text-specific-result);
+    background-color: var(--key-bg-special);
+    box-shadow: 0 -2px 1px var(--key-shadow-special) inset;
+  }
+
+
 *,*::after,*::before {
     margin: 0;
     padding: 0;
@@ -185,19 +243,18 @@ header {
   background-color: var(--toggle-bg);
   border-radius: .5rem;
   
-  
   button {
-    cursor: pointer;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border-radius: .25rem;
-    background-color: var(--key-bg);
-    border: none;
-    box-shadow: 0 -2px 1px var(--key-shadow) inset;
-    color: var(--text-primary);
-    font-weight: bold;
-    
-  }
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  background-color: var(--key-bg);
+  border: none;
+  box-shadow: 0 -2px 1px var(--key-shadow) inset;
+  color: var(--text-primary);
+  font-weight: bold;
+  
+}
   #delButton {
     color: var(--text-secondary);
     background-color: var(--key-bg-del);

@@ -22,49 +22,61 @@
     <script src="/src/script.js" defer></script>
     <script src="/src/themeChanger.js" defer></script>
   </head>
-  <body>
-    <main>
-      <header>
-        <div>
+  <body
+    class="theme1 flex h-screen items-center justify-center bg-[var(--main-bg)] font-spartan font-bold"
+  >
+    <main class="me-12 ms-12 flex max-w-[80%] flex-col gap-4">
+      <header class="flex justify-between gap-4 text-xs">
+        <div
+          class="flex w-[85%] justify-between items-end text-[var(--text-specific)]"
+        >
           <h1>calc</h1>
           <p>THEME</p>
         </div>
-        <div class="header-options">
-          <div class="options-numbers">
+        <div class="flex flex-col text-[var(--text-specific)]">
+          <div class="flex justify-around p-[.1rem]">
             <span>1</span>
             <span>2</span>
             <span>3</span>
           </div>
-          <div id="toggleButton" class="toggle">
-            <div class="toggle-thumb"></div>
+          <div
+            id="toggleButton"
+            class="toggle relative h-6 w-16 cursor-pointer rounded-full bg-[var(--toggle-bg)]"
+          >
+            <div
+              class="toggle-thumb absolute top-1/2 left-2 transform -translate-y-1/2 h-4 w-4 bg-[var(--key-bg-special)] rounded-full transition-transform duration-300 ease"
           </div>
         </div>
       </header>
-      <section class="result">
-        <span id="outcome">0</span>
+      <section
+        class="flex h-20 items-end justify-end rounded-lg bg-[var(--screen-bg)] px-4 pb-4 pt-6"
+      >
+        <span id="outcome" class="text-5xl text-[var(--text-specific)]">0</span>
       </section>
-      <section class="operators">
-        <button onclick="addToDisplay('7')">7</button>
-        <button onclick="addToDisplay('8')">8</button>
-        <button onclick="addToDisplay('9')">9</button>
+      <section
+        class="grid grid-cols-4 grid-rows-5 gap-4 rounded-lg bg-[var(--toggle-bg)] p-8"
+      >
+        <button onclick="addToDisplay('7')" class="btn">7</button>
+        <button onclick="addToDisplay('8')" class="btn">8</button>
+        <button onclick="addToDisplay('9')" class="btn">9</button>
 
-        <button id="delButton">DEL</button>
+        <button id="delButton" class="btn">DEL</button>
 
-        <button onclick="addToDisplay('4')">4</button>
-        <button onclick="addToDisplay('5')">5</button>
-        <button onclick="addToDisplay('6')">6</button>
-        <button onclick="setOperation('+')">+</button>
-        <button onclick="addToDisplay('1')">1</button>
-        <button onclick="addToDisplay('2')">2</button>
-        <button onclick="addToDisplay('3')">3</button>
-        <button onclick="setOperation('-')">-</button>
-        <button onclick="addToDisplay('.')">.</button>
-        <button onclick="addToDisplay('0')">0</button>
-        <button onclick="setOperation('/')">/</button>
-        <button onclick="setOperation('*')">x</button>
+        <button class="btn" onclick="addToDisplay('4')">4</button>
+        <button class="btn" onclick="addToDisplay('5')">5</button>
+        <button class="btn" onclick="addToDisplay('6')">6</button>
+        <button class="btn" onclick="setOperation('+')">+</button>
+        <button class="btn" onclick="addToDisplay('1')">1</button>
+        <button class="btn" onclick="addToDisplay('2')">2</button>
+        <button class="btn" onclick="addToDisplay('3')">3</button>
+        <button class="btn" onclick="setOperation('-')">-</button>
+        <button class="btn" onclick="addToDisplay('.')">.</button>
+        <button class="btn" onclick="addToDisplay('0')">0</button>
+        <button class="btn" onclick="setOperation('*')">x</button>
+        <button class="btn" onclick="setOperation('/')">/</button>
 
-        <button id="resetButton">RESET</button>
-        <button id="equalButton">=</button>
+        <button class="btn" id="resetButton">RESET</button>
+        <button id="equalButton" class="btn">=</button>
       </section>
     </main>
   </body>

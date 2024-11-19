@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.{html,js}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'spartan': ['League Spartan', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
